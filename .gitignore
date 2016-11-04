@@ -6,3 +6,6 @@ typings/
 tmp
 .DS_Store
 .idea
+/yarn.lock
+/src/**/*.js.map
+/src/**/*.js

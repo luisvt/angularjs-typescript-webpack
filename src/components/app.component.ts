@@ -1,9 +1,7 @@
-import {Component} from '../decorators';
-import {CommentsComponent} from "./comment-list/comments.component";
+import {Component} from 'ngts-annotations';
 
 @Component({
-    selector: 'app',
-    directives:  [CommentsComponent],
+    name: 'app',
     template: `<comments></comments>`
 })
 export class AppComponent {

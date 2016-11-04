@@ -2,12 +2,13 @@
  * Created by voland on 4/2/16.
  */
 
-import {Component} from '../../decorators';
+import {Component} from 'ngts-annotations';
 import './comment.scss';
 import {IComment} from "../../interfaces";
+import * as angular from 'angular';
 
 @Component({
-    selector: 'comment',
+    name: 'comment',
     bindings: {
         comment: '=',
         tags: '=',

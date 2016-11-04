@@ -1,7 +1,7 @@
 /**
  * Created by voland on 4/2/16.
  */
-import 'angular';
+import * as angular from 'angular';
 import 'angular-ui-router';
 import 'angular-sanitize';
 import 'ng-tags-input';
@@ -25,5 +25,5 @@ angular.module(appName, [
 
 // bootstrap
 angular.element(document).ready(() => {
-        angular.bootstrap(document, [appName], { strictDi: true });
+        angular.bootstrap(document, [appName]);
 });

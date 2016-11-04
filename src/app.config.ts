@@ -1,18 +1,18 @@
-import {routes} from "./app.routes";
-import {provideStates} from "./decorators";
+import IUrlRouterProvider = angular.ui.IUrlRouterProvider;
+import IStateProvider = angular.ui.IStateProvider;
 
-export function appConfig($urlRouterProvider, $stateProvider, tagsInputConfigProvider) {
-    provideStates(routes, $stateProvider);
+export function appConfig($urlRouterProvider: IUrlRouterProvider, $stateProvider: angular.ui.IStateProvider, tagsInputConfigProvider) {
+  $stateProvider.state({name: 'root', url: '/', template: '<app></app>'});
 
-    $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/');
 
-    tagsInputConfigProvider
-        .setDefaults('tagsInput', {
-            placeholder: 'Search tags',
-            addFromAutocompleteOnly: true
-        })
-        .setDefaults('autoComplete', {
-            minLength: 1
-        })
+  tagsInputConfigProvider
+    .setDefaults('tagsInput', {
+      placeholder: 'Search tags',
+      addFromAutocompleteOnly: true
+    })
+    .setDefaults('autoComplete', {
+      minLength: 1
+    })
 }
 appConfig.$inject = ['$urlRouterProvider', '$stateProvider', 'tagsInputConfigProvider'];

@@ -1,6 +1,13 @@
 /**
  * Created by vlad on 5/29/16.
  */
-export default angular.module('app.components', []);
-// export {CommentController} from './comment/comment.component';
-// export {CommentsController} from './comment-list/comments.component';
+import {autoDeclare} from 'ngts-annotations';
+import {CommentComponent} from './comment/comment.component';
+import {CommentsComponent} from './comment-list/comments.component';
+import {AppComponent} from './app.component';
+
+export default autoDeclare('app.components', [], [
+  AppComponent,
+  CommentComponent,
+  CommentsComponent
+])

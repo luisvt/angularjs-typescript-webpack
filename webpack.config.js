@@ -15,7 +15,7 @@ module.exports = {
     module: {
         loaders: [
             // load css and process sass
-            { test: /\.scss$/, loaders: ["style", "css", "sass"]},
+            { test: /\.scss$/, loaders: ["style", "css", "ruby-sass"]},
 
             // all files with a `.ts` or `.tsx` extension will be handled by `ts-loader`
             { test: /\.ts$/, loader: 'awesome-typescript-loader' }
